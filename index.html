@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospedarte Hostels - Tu Hogar Lejos de Casa</title>
+    <meta name="description" content="Hospedarte Hostels ofrece alojamiento cómodo y moderno en el corazón de la ciudad. Descubre también nuestros tours BarHop Adventures.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">
+                    <span class="logo-text">Hospedarte</span>
+                    <span class="logo-accent">Hostels</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#habitaciones" class="nav-link">Habitaciones</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#tours" class="nav-link">Tours BarHop</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#reservar" class="btn btn-primary">Reservar Ahora</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Bienvenido a Hospedarte Hostels</h1>
+            <p class="hero-subtitle">Tu hogar lejos de casa en el corazón de la ciudad</p>
+            <div class="hero-buttons">
+                <a href="#habitaciones" class="btn btn-primary btn-lg">Explorar Habitaciones</a>
+                <a href="#tours" class="btn btn-secondary btn-lg">Descubre Tours</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-arrow">↓</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">🏨</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">Experiencia Única</h2>
+                    <p class="about-text">
+                        En Hospedarte Hostels, creamos más que un simple lugar para dormir. 
+                        Ofrecemos una experiencia completa que combina comodidad moderna, 
+                        ambiente acogedor y la oportunidad de conocer viajeros de todo el mundo.
+                    </p>
+                    <p class="about-text">
+                        Ubicados estratégicamente en el centro de la ciudad, nuestras instalaciones 
+                        están diseñadas para que te sientas como en casa mientras exploras todo 
+                        lo que la ciudad tiene para ofrecer.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Huéspedes Felices</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.8★</span>
+                            <span class="stat-label">Calificación</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Atención</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="habitaciones" class="rooms">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestras Habitaciones</h2>
+                <p class="section-subtitle">Opciones para cada tipo de viajero</p>
+            </div>
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🛏️</span>
+                        </div>
+                        <span class="room-badge">Popular</span>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Dormitorio Compartido</h3>
+                        <p class="room-description">
+                            Camas cómodas en dormitorios mixtos o separados. 
+                            Perfecto para viajeros que buscan conocer gente.
+                        </p>
+                        <ul class="room-features">
+                            <li>🔒 Lockers individuales</li>
+                            <li>💡 Luz de lectura personal</li>
+                            <li>🔌 Enchufes USB</li>
+                            <li>🛁 Baño compartido</li>
+                        </ul>
+                        <div class="room-footer">
+                            <span class="room-price">Desde $15/noche</span>
+                            <a href="#reservar" class="btn btn-outline">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🚪</span>
+                        </div>
+                        <span class="room-badge">Recomendado</span>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Habitación Privada</h3>
+                        <p class="room-description">
+                            Tu espacio personal con todas las comodidades. 
+                            Ideal para parejas o quienes buscan más privacidad.
+                        </p>
+                        <ul class="room-features">
+                            <li>🛏️ Cama doble o individual</li>
+                            <li>🚿 Baño privado</li>
+                            <li>📺 TV y WiFi rápido</li>
+                            <li>❄️ Aire acondicionado</li>
+                        </ul>
+                        <div class="room-footer">
+                            <span class="room-price">Desde $45/noche</span>
+                            <a href="#reservar" class="btn btn-outline">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">👥</span>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Suite Familiar</h3>
+                        <p class="room-description">
+                            Espacio amplio para familias o grupos pequeños. 
+                            Comodidad y privacidad para todos.
+                        </p>
+                        <ul class="room-features">
+                            <li>👨‍👩‍👧‍👦 Hasta 4 personas</li>
+                            <li>🛏️ Camas múltiples</li>
+                            <li>🏠 Sala de estar</li>
+                            <li>🍽️ Mini cocina</li>
+                        </ul>
+                        <div class="room-footer">
+                            <span class="room-price">Desde $80/noche</span>
+                            <a href="#reservar" class="btn btn-outline">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="servicios" class="amenities">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Servicios e Instalaciones</h2>
+                <p class="section-subtitle">Todo lo que necesitas para una estadía perfecta</p>
+            </div>
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <div class="amenity-icon">📶</div>
+                    <h3 class="amenity-title">WiFi Gratis</h3>
+                    <p class="amenity-description">Internet de alta velocidad en todas las áreas</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🍳</div>
+                    <h3 class="amenity-title">Cocina Completa</h3>
+                    <p class="amenity-description">Cocina equipada disponible 24/7</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🧺</div>
+                    <h3 class="amenity-title">Lavandería</h3>
+                    <p class="amenity-description">Servicio de lavado disponible</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🎮</div>
+                    <h3 class="amenity-title">Área Común</h3>
+                    <p class="amenity-description">Espacio social con juegos y entretenimiento</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">🔐</div>
+                    <h3 class="amenity-title">Seguridad 24/7</h3>
+                    <p class="amenity-description">Recepción y vigilancia continua</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">☕</div>
+                    <h3 class="amenity-title">Desayuno</h3>
+                    <p class="amenity-description">Desayuno continental incluido</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BarHop Adventures Section -->
+    <section id="tours" class="barhop">
+        <div class="barhop-overlay"></div>
+        <div class="container">
+            <div class="barhop-content">
+                <div class="barhop-header">
+                    <span class="barhop-badge">Experiencia Adicional</span>
+                    <h2 class="barhop-title">BarHop Adventures</h2>
+                    <p class="barhop-subtitle">Descubre la vida nocturna local con nuestros tours exclusivos</p>
+                </div>
+                
+                <div class="barhop-grid">
+                    <div class="barhop-info">
+                        <h3 class="barhop-section-title">¿Qué es BarHop Adventures?</h3>
+                        <p class="barhop-text">
+                            BarHop Adventures es nuestra experiencia especial diseñada para que 
+                            nuestros huéspedes descubran los mejores lugares de la escena nocturna local.
+                        </p>
+                        <p class="barhop-text">
+                            Recorre bares emblemáticos, prueba bebidas locales y conoce a otros 
+                            viajeros en una noche inolvidable guiada por expertos locales.
+                        </p>
+                        
+                        <div class="barhop-features">
+                            <div class="barhop-feature">
+                                <span class="feature-icon">🎫</span>
+                                <div>
+                                    <h4>Tours Nocturnos</h4>
+                                    <p>Visita 4-5 bares en una noche</p>
+                                </div>
+                            </div>
+                            <div class="barhop-feature">
+                                <span class="feature-icon">🍹</span>
+                                <div>
+                                    <h4>Bebidas Incluidas</h4>
+                                    <p>Primera bebida gratis en cada lugar</p>
+                                </div>
+                            </div>
+                            <div class="barhop-feature">
+                                <span class="feature-icon">👥</span>
+                                <div>
+                                    <h4>Grupos Pequeños</h4>
+                                    <p>Máximo 15 personas por tour</p>
+                                </div>
+                            </div>
+                            <div class="barhop-feature">
+                                <span class="feature-icon">🗺️</span>
+                                <div>
+                                    <h4>Guías Locales</h4>
+                                    <p>Expertos conocedores de la ciudad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barhop-tours">
+                        <h3 class="barhop-section-title">Tours Disponibles</h3>
+                        
+                        <div class="tour-card">
+                            <div class="tour-header">
+                                <h4 class="tour-name">Classic BarHop</h4>
+                                <span class="tour-price">$25</span>
+                            </div>
+                            <p class="tour-description">
+                                Tour clásico por los mejores bares del centro histórico
+                            </p>
+                            <div class="tour-schedule">
+                                <span>🕘 Jueves a Sábado - 9:00 PM</span>
+                            </div>
+                            <a href="#reservar-tour" class="btn btn-barhop">Reservar Tour</a>
+                        </div>
+
+                        <div class="tour-card">
+                            <div class="tour-header">
+                                <h4 class="tour-name">Craft Beer Tour</h4>
+                                <span class="tour-price">$30</span>
+                            </div>
+                            <p class="tour-description">
+                                Descubre las mejores cervecerías artesanales locales
+                            </p>
+                            <div class="tour-schedule">
+                                <span>🕘 Viernes y Sábado - 7:00 PM</span>
+                            </div>
+                            <a href="#reservar-tour" class="btn btn-barhop">Reservar Tour</a>
+                        </div>
+
+                        <div class="tour-card">
+                            <div class="tour-header">
+                                <h4 class="tour-name">Rooftop Experience</h4>
+                                <span class="tour-price">$35</span>
+                            </div>
+                            <p class="tour-description">
+                                Vistas espectaculares desde los mejores rooftops
+                            </p>
+                            <div class="tour-schedule">
+                                <span>🕘 Sábado - 8:00 PM</span>
+                            </div>
+                            <a href="#reservar-tour" class="btn btn-barhop">Reservar Tour</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="barhop-cta">
+                    <p class="cta-text">¿Eres huésped de Hospedarte? ¡Obtén 15% de descuento en todos los tours!</p>
+                    <a href="#contacto" class="btn btn-primary btn-lg">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo Que Dicen Nuestros Huéspedes</h2>
+                <p class="section-subtitle">Experiencias reales de viajeros como tú</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "¡Increíble experiencia! El hostel es muy limpio y el personal súper amable. 
+                        El tour BarHop fue lo mejor de mi viaje. Conocí gente genial y descubrí lugares 
+                        que nunca habría encontrado solo."
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">María González</span>
+                        <span class="author-country">España</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Perfect hostel for solo travelers! The atmosphere is friendly, rooms are clean, 
+                        and the location is great. The BarHop tour was an awesome way to see the nightlife 
+                        and meet other travelers."
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">John Smith</span>
+                        <span class="author-country">USA</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Excelente relación calidad-precio. Las instalaciones son modernas y el ambiente 
+                        muy agradable. Recomiendo totalmente el Craft Beer Tour, ¡las cervezas artesanales 
+                        son deliciosas!"
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Carlos Ruiz</span>
+                        <span class="author-country">México</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Contáctanos</h2>
+                    <p class="contact-text">
+                        ¿Tienes preguntas? Estamos aquí para ayudarte. 
+                        Contáctanos por cualquiera de estos medios.
+                    </p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Calle Principal #123, Centro Histórico</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+52 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@hospedartehostels.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🕐</span>
+                            <div>
+                                <h4>Horario</h4>
+                                <p>Recepción 24/7 - Siempre disponibles</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3 class="form-title">Envíanos un Mensaje</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder="Tu email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required placeholder="Asunto">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder="Tu mensaje"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">Hospedarte Hostels</h3>
+                    <p class="footer-text">
+                        Tu hogar lejos de casa. Ofrecemos la mejor experiencia de hospedaje 
+                        y tours nocturnos en la ciudad.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#habitaciones">Habitaciones</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#tours">Tours BarHop</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Información</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Sobre Nosotros</a></li>
+                        <li><a href="#faq">Preguntas Frecuentes</a></li>
+                        <li><a href="#politicas">Políticas</a></li>
+                        <li><a href="#terminos">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Recibe ofertas especiales y noticias</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" class="newsletter-input">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hospedarte Hostels. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
