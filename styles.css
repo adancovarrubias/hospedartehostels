@@ -172,6 +172,7 @@ p {
     padding: 1rem 0;
     z-index: 1000;
     box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .nav-wrapper {

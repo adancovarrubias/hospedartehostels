@@ -39,7 +39,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===== Navbar Scroll Effect and Active Link Update =====
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
-navbar.style.transition = 'transform 0.3s ease, background 0.3s ease';
 
 function handleScroll() {
     const currentScroll = window.pageYOffset;
@@ -214,8 +213,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-window.addEventListener('scroll', handleScroll);
 
 // ===== Scroll to Top Button =====
 function createScrollToTopButton() {
