@@ -36,13 +36,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Navbar Scroll Effect =====
+// ===== Navbar Scroll Effect and Active Link Update =====
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
+navbar.style.transition = 'transform 0.3s ease, background 0.3s ease';
 
-window.addEventListener('scroll', () => {
+function handleScroll() {
     const currentScroll = window.pageYOffset;
     
+    // Navbar hide/show logic
     if (currentScroll <= 0) {
         navbar.style.background = 'rgba(26, 26, 46, 0.95)';
     } else if (currentScroll > lastScroll) {
@@ -55,7 +57,36 @@ window.addEventListener('scroll', () => {
     }
     
     lastScroll = currentScroll;
-});
+    
+    // Active navigation link
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPosition = window.scrollY + 100;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+    
+    // Parallax effect for hero
+    if (currentScroll < window.innerHeight) {
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.transform = `translateY(${currentScroll * 0.5}px)`;
+        }
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
 
 // ===== Intersection Observer for Animations =====
 const observerOptions = {
@@ -184,28 +215,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ===== Active Navigation Link =====
-function updateActiveNavLink() {
-    const sections = document.querySelectorAll('section[id]');
-    const scrollPosition = window.scrollY + 100;
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        const sectionId = section.getAttribute('id');
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    });
-}
-
-window.addEventListener('scroll', updateActiveNavLink);
+window.addEventListener('scroll', handleScroll);
 
 // ===== Scroll to Top Button =====
 function createScrollToTopButton() {
@@ -341,15 +351,6 @@ forms.forEach(form => {
     });
 });
 
-// ===== Parallax Effect for Hero =====
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
-
 // ===== Initialize Tooltips =====
 function initTooltips() {
     const tooltipElements = document.querySelectorAll('[data-tooltip]');
@@ -390,9 +391,13 @@ console.log('%cDescubre nuestros tours BarHop Adventures 🍻', 'color: #FFE66D;
 
 // ===== Performance Monitoring =====
 window.addEventListener('load', () => {
-    const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-    console.log(`Page loaded in ${pageLoadTime}ms`);
+    if (window.performance && window.performance.getEntriesByType) {
+        const perfData = window.performance.getEntriesByType('navigation')[0];
+        if (perfData) {
+            const pageLoadTime = perfData.loadEventEnd - perfData.fetchStart;
+            console.log(`Page loaded in ${Math.round(pageLoadTime)}ms`);
+        }
+    }
 });
 
 // ===== Service Worker Registration (for PWA support) =====
@@ -404,9 +409,6 @@ if ('serviceWorker' in navigator) {
         //     .catch(err => console.log('Service Worker registration failed'));
     });
 }
-
-// ===== Auto-hide navbar on scroll down, show on scroll up =====
-navbar.style.transition = 'transform 0.3s ease, background 0.3s ease';
 
 // ===== Add loading animation =====
 window.addEventListener('load', () => {
